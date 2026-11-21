@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AuthProvider } from "@/components/auth/AuthContext";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://resume-ai.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://resume-ai-one-ebon.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
