@@ -11,23 +11,29 @@ export const metadata: Metadata = {
     template: "%s | ResumeAI",
   },
   description:
-    "Build a 100% free, ATS-optimized, job-targeted resume in 2 minutes. Features honest skill matching, 10 executive templates, real-time PDF download, and AI career guidance.",
+    "Build a 100% free, ATS-optimized, job-targeted resume in 2 minutes. Tailored for top tech companies (Google, Microsoft, Amazon, TCS, Infosys, Tech Mahindra). 10 professional templates, instant PDF download.",
   keywords: [
     "AI Resume Builder",
     "Free Resume Builder",
     "ATS Resume Checker",
     "Job Targeted Resume",
-    "Free PDF Resume Download",
-    "Resume Maker Online",
-    "Honest Resume AI",
     "Software Engineer Resume Builder",
+    "TCS Resume Builder",
+    "Infosys Resume Format",
+    "Google SDE Resume Builder",
+    "Tech Mahindra Developer Resume",
     "Fresher Resume Builder India",
-    "Professional Resume Templates 2026",
+    "Tech Jobs Resume Maker",
+    "Free PDF Resume Download",
+    "Honest Resume AI",
     "Resume AI",
   ],
   authors: [{ name: "ResumeAI Team" }],
   creator: "ResumeAI",
   publisher: "ResumeAI",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -38,9 +44,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "ResumeAI",
-    title: "ResumeAI — 100% Free AI Resume Builder & ATS Checker",
+    title: "ResumeAI — Free AI Resume Builder & ATS Checker for Tech Jobs",
     description:
-      "Craft tailored, ATS-ready resumes designed for your dream company. 10 modern templates, zero fees for job seekers, instant PDF export.",
+      "Craft tailored, ATS-ready resumes designed for your dream company (Google, TCS, Infosys, Tech Mahindra). 10 modern templates, zero candidate fees, instant PDF export.",
     images: [
       {
         url: "/next.svg",
@@ -53,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ResumeAI — Free AI Resume Builder & ATS Checker",
-    description: "Build job-targeted, ATS-proof resumes in minutes with AI. 100% free forever for candidates.",
+    description: "Build job-targeted, ATS-proof resumes for tech roles in minutes with AI. 100% free forever.",
     images: ["/next.svg"],
   },
   robots: {
@@ -72,7 +78,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data Schema for Google Search Rich Snippets
+// JSON-LD Structured Data Schema for Google Search Rich Snippets & People Also Ask
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -111,6 +117,36 @@ const jsonLd = {
         bestRating: "5",
         worstRating: "1",
       },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How do I build a resume for specific tech companies like Google, TCS, Infosys, and Tech Mahindra?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "With ResumeAI, simply select or type your target company and job position. Our AI analyzes the company requirements, job descriptions, and matches your genuine profile with honest ATS scoring and relevant keyword optimization.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does ResumeAI ensure high ATS match scores for software engineering jobs?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "ResumeAI extracts the core technical competencies (React, Next.js, Node.js, Python, AWS, SQL, etc.) from the job description and helps you align your genuine projects, experience, and certifications without fabricating fake claims.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is ResumeAI really 100% free for candidates and freshers?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, candidates and job seekers can create, match, and export unlimited resumes in all 10 executive templates completely free with zero watermark.",
+          },
+        },
+      ],
     },
   ],
 };

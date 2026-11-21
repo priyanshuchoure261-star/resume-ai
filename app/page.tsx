@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import NavAuthButton from "@/components/auth/NavAuthButton";
 import PromotionSlot from "@/components/ads/PromotionSlot";
 
@@ -498,6 +498,86 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Top Companies & Tech Roles SEO Section */}
+      <section className="seo-directory-section" style={{ padding: "80px 24px", maxWidth: 1200, margin: "0 auto" }}>
+        <div className="section-heading text-center" style={{ textAlign: "center", marginBottom: 40 }}>
+          <div className="section-label">POPULAR TECH JOBS & HIRING COMPANIES</div>
+          <h2 style={{ fontSize: 32, fontWeight: 800, color: "white", marginBottom: 12 }}>
+            Tailored Resumes for <span className="gradient-text">Top Companies & Roles</span>
+          </h2>
+          <p style={{ color: "#94a3b8", maxWidth: 640, margin: "0 auto", fontSize: 15 }}>
+            Targeting a specific employer or role? Select your company and position. Our AI aligns your genuine skills with high-scoring ATS keyword patterns.
+          </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+          {/* Target Companies */}
+          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: 24 }}>
+            <h3 style={{ color: "#c4b5fd", fontSize: 18, fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8 }}>
+              🏢 Top Hiring Tech Companies
+            </h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {["Google", "Microsoft", "Amazon", "TCS", "Infosys", "Tech Mahindra", "Accenture", "HDFC Bank", "Wipro", "Capgemini", "Flipkart", "Zomato"].map((company) => (
+                <Link
+                  key={company}
+                  href={`/create?company=${encodeURIComponent(company)}`}
+                  style={{
+                    background: "rgba(124, 58, 237, 0.12)",
+                    border: "1px solid rgba(124, 58, 237, 0.3)",
+                    color: "#e2e8f0",
+                    padding: "6px 12px",
+                    borderRadius: 20,
+                    fontSize: 13,
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                  }}
+                >
+                  {company} Resume →
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Popular Job Roles */}
+          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: 24 }}>
+            <h3 style={{ color: "#5ee7a1", fontSize: 18, fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8 }}>
+              💻 In-Demand Tech Roles
+            </h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {[
+                "Software Engineer (SDE)",
+                "Frontend Developer",
+                "Backend Developer",
+                "Full Stack Developer",
+                "Fresher / Campus Placement",
+                "Data Analyst",
+                "DevOps & Cloud Engineer",
+                "Python Developer",
+                "Java Spring Boot Engineer",
+                "React & Next.js Developer",
+              ].map((role) => (
+                <Link
+                  key={role}
+                  href={`/create?role=${encodeURIComponent(role)}`}
+                  style={{
+                    background: "rgba(94, 231, 161, 0.1)",
+                    border: "1px solid rgba(94, 231, 161, 0.25)",
+                    color: "#e2e8f0",
+                    padding: "6px 12px",
+                    borderRadius: 20,
+                    fontSize: 13,
+                    textDecoration: "none",
+                    transition: "all 0.2s",
+                  }}
+                >
+                  {role} →
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
