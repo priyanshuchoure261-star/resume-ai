@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   creator: "ResumeAI",
   publisher: "ResumeAI",
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    google: "waTZHXXeDhmagsBaVatXG8AJV6fowxIRCMDw2RdXFBg",
   },
   formatDetection: {
     email: false,
@@ -159,6 +159,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="waTZHXXeDhmagsBaVatXG8AJV6fowxIRCMDw2RdXFBg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
